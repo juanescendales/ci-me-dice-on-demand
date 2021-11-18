@@ -13,5 +13,10 @@ def dice_page():
 def test():
     return "Works!"
 
+#Testing change
+@app.route('/hello')
+def test():
+    return "Goodbye World"
+
 if __name__ == '__main__':
     app.run()
