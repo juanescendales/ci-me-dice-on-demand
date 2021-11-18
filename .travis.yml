@@ -1,0 +1,14 @@
+branches:
+  only:
+  - main
+language: python
+install:
+- pip install -r requirements.txt
+script:
+- python3 -m pytest -v tests/test_dice.py
+deploy:
+  provider: heroku
+  api_key:
+    secure: o6gCckSv1l0rwl/pkXg7foGcGOsR1tTV7GK7NOHdkWFWlrpJgwtzYVkP1M1gfV66RJVIDrYU3VCJwlK05a+KTRT0pNUXpz1kddfTg9N7XZCKaxfzm4JYivrkH7VKNYnLSYqLiwZMQU9m18HklwDDk3Oq4cK3qTNWC6J4yEtJxJHuaC7aKz6J4/KvFMAMJ9qxuyTFsIVI/tr6rQaHSX70303aX1pEQ6M16FCh+kOSZvsA5bCWdi5DAO1yXK/JmnUqL8nTeY7niiIO/14nLiRrlVfwDPIkZj85xsbVMb1pRpA+lqgfwtIHmu8UQiWQeyqrRktekADUJVlf/V8xq6RumXmbCoOSJI2X3L7a+Z+ylNKH0fPzBfgyey7aQUUyaUTV9PxrJkdcnENcVLCejz+SjFGhbyqar+eDvyaaVqWRXJnVDUEg8MWmRIhuNdawoGhl2NGx23eGIQoUXW9IqgC6b3T9UVaFNOse0cIWIUUHubivYxXBlQ1T3mJoUgOp4k43Nabfhn0BaDVyakuKDni2JeXlA3L9jsuLbUWndwTivJxhCkV/1lnXlAkBGywsa6ZXhU8kM3m2L5spXtFty9zuFef4SRgW9ZerdC5IVGufDXVKQkIo3ZS6+KToM/jdZPFPtFIOSp5M3XJ5lDLZ01xnVGkYzD/xBbg7EJipsEZgoZ4=
+  app:
+    main: ci-me-dice-staging
