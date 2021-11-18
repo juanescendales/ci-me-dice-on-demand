@@ -15,7 +15,7 @@ def test():
 
 #Testing change
 @app.route('/hello')
-def test():
+def hello():
     return "Goodbye World"
 
 if __name__ == '__main__':
